@@ -7,9 +7,12 @@ def starts_with_vow(book):
 	for line in book.split():
 		word=line.strip(string.punctuation)
 		myword=word.lower()
-		if(myword[0]=='a' or myword[0]=='e' or myword[0]=='i' or myword[0]=='o' or myword[0]=='u'):
-                        count+=1
+#		if(myword[0]=='a' or myword[0]=='e' or myword[0]=='i' or myword[0]=='o' or myword[0]=='u'):
+#                        count+=1
 		book_list.append(myword)
+	for elem in book_list:
+		if (book_list[elem][0]=='a' or book_list[elem][0]=='e'or book_list[elem][0]=='i'or book_list[elem][0]=='o' or book_list[elem][0]=='u'):
+			count+=1
 #		print(book_list)
 	print('The total no of words in the book, starting with vowels is:',count)
 
@@ -22,8 +25,8 @@ file3=fp3.read()
 
 print("\n=========Book1 word list count============\n") 
 starts_with_vow(file1)
-#print("\n=========Book2 word list count============\n") 
-#starts_with_vow(file2)
-#print("\n=========Book3 word list count============\n") 
-#starts_with_vow(file3)
+print("\n=========Book2 word list count============\n") 
+starts_with_vow(file2)
+print("\n=========Book3 word list count============\n") 
+starts_with_vow(file3)
 
